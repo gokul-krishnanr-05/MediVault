@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediVault</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f3f4f6;
+    }
+    
+    
+    .container1 {
+        background: linear-gradient(to right, #8bcfd9, #939693);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+    }
+    
+    
+    .container2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    
+    .one h1 {
+        font-size: 4em;
+        font-weight:700;
+        background: linear-gradient(to right, #7b1fa2, #d81b60);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin: 0;
+    }
+    
+    
+    .menu {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .menu_bar a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 1.2em;
+        font-weight: 500;
+        padding: 8px 16px;
+        border-radius: 4px;
+    }
+    
+    
+    .menu_bar a:hover {
+        background-color: #9428c2;
+        color: #ffffff;
+    }
+    
+    .section1 {
+        background-image: url("./wallpaper-origami-black.png");
+        background-size: cover;
+        padding: 40px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    }
+    
+    
+    .container3 {
+        display: grid;
+        position: relative;
+        max-width: 100%;
+        margin: auto;
+        color: #fff;
+        z-index: 1;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap:40vh;
+        
+    
+    }
+    .group {
+        margin-bottom: 20px;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    
+    input {
+        width: 60vh;
+        padding: 12px;
+        border-radius: 10px;
+        border: none;
+        background-color: #f1f1f1;
+        color: #333;
+        font-size: 1em;
+    }
+    
+    input:focus {
+        outline: none;
+        box-shadow: 0 0 10px rgba(255, 154, 0, 0.8);
+        background-color: rgba(255, 255, 255, 1);
+    }
+    .btn{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .btn button {
+        background-color: #f39f19;
+        color: #fff;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 1.2em;
+    }
+    .btn{
+        display: flex;
+        justify-content: center;
+        margin-right: 100px;
+    
+    }
+    
+    button:hover {
+        background-color: #e67e22;
+    }
+    
+    .head h1 {
+        background: linear-gradient(90deg, #d4ddec, #f1cba5); 
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        font-size:2rem;
+        font-weight: 800;
+        text-align:justify;
+        font-size: 2rem;
+        font-weight:800;
+    
+    }
+    .head h5{
+        text-align: justify;
+        font-size: 1.2rem;
+        background: linear-gradient(90deg, #e94d4d, #31d56d); 
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    .head{
+        margin-top:100px
+    }
+    #image{
+        height:300px
+    }
+    .all {
+        margin: 0;
+        background: linear-gradient(to right, #72d2e1, #266b6e);
+        text-align: center;
+        padding: 30px 0;
+    }
+    
+   .all h1 {
+        font-size: 2rem;
+        font-weight: 800;
+        color: #4d8e4f;
+        margin-bottom: 30px;
+    }
+    
+    #newuser {
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        gap: 30px;
+        padding: 0 20px;
+    }
+    
+    .health {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        transition: transform 0.3s ease-in-out;
+        overflow: hidden;
+    }
+    
+    .health:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .health img {
+        width: 100%;
+       max-height: auto;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .all h2 {
+        color: #333;
+        font-size: 1.2rem;
+        margin: 5px 0;
+    }
+    
+   .all h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-top: 15px;
+        text-align: center;
+        color: #4caf50;
+    }
+    .all h1 {
+        display: inline-block;
+        background: linear-gradient(45deg, #8b9097, #9697da); 
+        color: white; 
+        font-family: 'Lucida Console', Monaco, monospace;
+        font-size: 2em; 
+        text-align: center; 
+        max-width: 100%;
+        padding: 20px; 
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); 
+        letter-spacing: 1px; 
+        margin-bottom: 80px;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+    
+    .all h1:hover {
+        background: linear-gradient(45deg, #8970a6, #8b78aa); 
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
+    }
+    
+    
+    small {
+        display: block;
+        text-align: right;
+        font-size: 0.9rem;
+        color: #676262;
+        margin-top: 10px;
+    }
+    
+    .button2 {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+    
+    button.edit-btn,
+    button.delete-btn {
+        padding: 8px 15px;
+        border-radius: 5px;
+        border: none;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    button.edit-btn {
+        background-color: #4caf50;
+        color: white;
+    }
+    
+    button.edit-btn:hover {
+        background-color: #45a049;
+    }
+    
+    button.delete-btn {
+        background-color: #f44336;
+        color: white;
+    }
+    
+    button.delete-btn:hover {
+        background-color: #e53935;
+    }
+    
+.new{
+    display: flex;
+    flex-direction: column;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #cec7f5;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.closeButton {
+    display: flex;
+    justify-content: flex-end;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.closeButton:hover {
+    color: #e94d4d; 
+}
+
+.button1 button{
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 20px;
+
+}
+.button1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.medicines-container {
+    max-height: 150px; 
+    overflow-y: auto;  
+    margin-bottom: 15px;
+    padding-right: 10px;
+}
+
+.medicines-container ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.medicines-container li {
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    background-color: #e6abff;
+    border-radius: 5px;
+    padding: 5px;
+    color: #333;
+}
+footer {
+    background: linear-gradient(135deg, #1f2937, #2d3a4e);
+    color: white;
+    padding: 40px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.company-info {
+    text-align: right;
+}
+
+footer h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #f39c12;
+    margin: 0;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(45deg, #f39c12, #e74c3c);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+footer p {
+    font-size: 1.1rem;
+    color: #bdc3c7;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+}
+
+.social-media a {
+    margin: 0 15px;
+    color: #ecf0f1;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #f39c12;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .company-info {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    footer h2 {
+        font-size: 2rem;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+
+    .social-media a {
+        font-size: 1.8rem;
+        margin: 10px;
+    }
+}
+
+
+    
+    </style>
+</head>
+
+<body>
+<nav class="container1">
+    <div class="container2">
+        <div class="one">
+    <h1><i class='bx bx-pulse'></i> MediVault</h1>
+    </div>
+
+    <div class="task">
+        <ul class="menu">
+            <li class="menu_bar">
+                <a href="#" >HOME</a>
+            </li>
+            <li class="menu_bar">
+                <a href="#abt" >ABOUT</a>
+            </li>
+            <li class="menu_bar">
+                <a href="#" >SUBSCRIBE</a>
+            </li>
+        </ul>
+    </div>
+    </div>
+    
+</nav>
+<div class="new">
+<div class="section1">
+    <div class="container3">
+        <div class="head">
+       <h1>
+        "Your Health in Focus – 
+        Every Pill, 
+        Every Visit, Every Step."</h1>
+       
+       <!-- <h5>
+        At MediVault, we promise to simplify your health management by providing a secure and easy-to-use platform for storing and accessing your medical information. “Your health, organized.” With us, you can effortlessly track your medications, appointments, and personal health details, ensuring you always stay informed and prepared. Join us in taking control of your health journey—because at MediVault, we believe that managing your health should be simple and accessible.</h5> -->
+    </div>
+        <div id="patientDetails">
+            <h2>ADD DETAILS     <i class='bx bx-user-plus'></i></h2>
+            <div class="group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="group">
+                <label for="photo">Photo URL:</label>
+                <input type="url" id="photo" name="photo" required>
+            </div>
+            <div class="group">
+                <label for="medicines">Medicines:</label>
+                <input type="text" id="medicines" name="medicines" required>
+            </div>
+            <div class="group">
+                <label for="lVisit">Last Visit:</label>
+                <input type="date" id="lVisit" name="lVisit" required>
+            </div>
+            <div class="group">
+                <label for="nVisit">Next Visit:</label>
+                <input type="date" id="nVisit" name="nVisit" required>
+            </div>
+            <div class="btn">
+            <button id="addPatientButton" onclick="submitData()">SUBMIT</button>
+        </div>
+        </div>
+    </div>
+</div>
+    <div class="all">
+        <h1>
+            PROFILES   <i class='bx bx-user' ></i>
+        </h1>
+    
+    <div id="newuser" >
+    </div>
+</div>
+</div>
+
+</div>
+<div class="modal" id="editModal">
+    <div class="modal-content">
+        <span class="closeButton">&times;</span>
+        <form  id="edit-form" onsubmit="editDetails(event)">
+            <h2>EDIT DETAILS</h2>
+            <div class="form-group">
+                <label for="edit-name">Name</label>
+                <input type="text" class="form-control" id="edit-name" required>
+            </div>
+            <div class="form-group">
+                <label for="edit-age">Age</label>
+                <input type="text" class="form-control" id="edit-age" required>
+            </div>
+            <div class="form-group">
+                <label for="edit-photo">Photo</label>
+                <input type="text" class="form-control" id="edit-photo" required>
+            </div>
+            <div class="form-group">
+                <label for="edit-medicines">Medicines</label>
+                <input type="text" class="form-control" id="edit-medicines" required>
+            </div>
+            <div class="form-group">
+                <label for="edit-lvisit">Last Visit</label>
+                <input type="text" class="form-control" id="edit-lvisit" required>
+            </div>
+            <div class="form-group">
+                <label for="edit-nvisit">Next Visit</label>
+                <input type="text" class="form-control" id="edit-nvisit" required>
+            </div>
+            
+            <div class="button1">
+                <button class="btn" type="submit">Update</button>
+            </div>
+            
+        </form>
+    </div>
+</div>
+<footer>
+    <div class="footer-content">
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank"><i class='bx bxl-facebook'></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class='bx bxl-instagram'></i></a>
+            <a href="https://twitter.com" target="_blank"><i class='bx bxl-twitter'></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class='bx bxl-linkedin'></i></a>
+        </div>
+        <div class="company-info">
+            <h2>MediVault</h2>
+            <p>Your Health, Simplified-Empowering you to manage every step of your journey.</p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    async function submitData() {
+        const Name=document.getElementById("name").value;
+        const Age=document.getElementById("age").value;
+        const Photo=document.getElementById("photo").value;
+        const Medicines=document.getElementById("medicines").value;
+        const LVisit=document.getElementById("lVisit").value;
+        const NVisit=document.getElementById("nVisit").value;
+    
+    
+    
+    const response=await fetch("http://localhost:3000/api/health",{
+        method:'POST',
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify({Name,Age,Photo,Medicines,LVisit,NVisit})
+        
+
+    });
+    if(response.ok){
+        document.getElementById("name").value="";
+        document.getElementById("age").value="";
+        document.getElementById("photo").value="";
+        document.getElementById("medicines").value="";
+        document.getElementById("lVisit").value="";
+        document.getElementById("nVisit").value="";
+        fetchDetails()
+    }else{
+        console.error("Submission failed:",response.statusText);
+    }}
+    
+
+    async function fetchDetails(){
+        const response = await fetch("http://localhost:3000/api/health");
+        const details=await response.json();
+        const container =document.getElementById("newuser");
+        container.innerHTML="";
+        details.forEach(detail=>{
+            const lastVisitDate = new Date(detail.LVisit).toISOString().split('T')[0];
+            const nextVisitDate = new Date(detail.NVisit).toISOString().split('T')[0];
+            const hlthdiv = document.createElement("div");
+            hlthdiv.className="health"
+            hlthdiv.innerHTML=`
+    <h2>Name: ${detail.Name}</h2>
+    <h2>Age: ${detail.Age}</h2>
+    <img src="${detail.Photo}" id="image" alt="">
+    <h3>Medicines:</h3>
+    <div class="medicines-container">
+        <ul>
+            ${detail.Medicines.split(',').map(med => `<li>${med.trim()}</li>`).join('')}
+        </ul>
+    </div>
+    <h2>Last Visit: ${lastVisitDate}</h2>
+    <h2>Next Visit: ${nextVisitDate}</h2>
+    <small>Posted on: ${new Date(detail.Date).toLocaleString()}</small>
+    <div class="button2">
+        <button class="edit-btn" onclick="openEditModal('${detail._id}', '${detail.Name}', '${detail.Age}', '${detail.Photo}', '${detail.Medicines}', '${lastVisitDate}', '${nextVisitDate}')"> Edit</button>
+        <button class="delete-btn" onclick="deleteDetails('${detail._id}')">Delete  <i class='bx bxs-trash'></i></button>
+    </div>
+`;
+            container.appendChild(hlthdiv);
+        })
+    }
+    let currentEditId=null;
+
+    async function openEditModal(id,Name,Age,Photo,Medicines,LVisit,NVisit){
+        currentEditId=id;
+        document.getElementById('edit-name').value=Name;
+        document.getElementById('edit-age').value=Age;
+        document.getElementById('edit-photo').value=Photo;
+        document.getElementById('edit-medicines').value=Medicines;
+        document.getElementById('edit-lvisit').value=LVisit;
+        document.getElementById('edit-nvisit').value=NVisit;
+        document.getElementById('editModal').style.display='flex';
+
+    }
+
+    async function editDetails(e){
+        e.preventDefault();
+        const Name = document.getElementById('edit-name').value;
+        const Age = document.getElementById('edit-age').value;
+        const Photo = document.getElementById('edit-photo').value;
+        const Medicines = document.getElementById('edit-medicines').value;
+        const LVisit = document.getElementById('edit-lvisit').value;
+        const NVisit = document.getElementById('edit-nvisit').value;
+      
+
+    
+        if (currentEditId) {
+            const response = await fetch(`http://localhost:3000/api/health/${currentEditId}`, {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ Name,Age,Photo,Medicines,LVisit,NVisit})
+            });
+          
+     
+            if (response.ok) {
+                fetchDetails();
+                CloseEdit()
+            } else {
+                console.error('Failed to update Details:', response.statusText);
+            }
+        }
+    }
+
+    async function deleteDetails(id){
+        const response = await fetch(`http://localhost:3000/api/health/${id}`, {
+        method:'DELETE'
+
+    })
+    if(response.ok) {
+        fetchDetails();
+
+    }
+    else{
+        console.error('Failed to delete Details:', response.statusText);
+    }
+}
+document.querySelector('.closeButton').onclick = CloseEdit;
+        function CloseEdit() {
+            document.getElementById('editModal').style.display = 'none';
+        }
+    window.onload=fetchDetails() 
+
+
+</script>
+  
+</body>
+</html>
