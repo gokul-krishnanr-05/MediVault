@@ -606,7 +606,7 @@ footer p {
     
     
     
-    const response=await fetch("http://localhost:3000/api/health",{
+    const response=await fetch("https://medivault-1.onrender.com/api/health",{
         method:'POST',
         headers:{
             'Content-Type':'application/json'
@@ -629,7 +629,7 @@ footer p {
     
 
     async function fetchDetails(){
-        const response = await fetch("http://localhost:3000/api/health");
+        const response = await fetch("https://medivault-1.onrender.com/api/health");
         const details=await response.json();
         const container =document.getElementById("newuser");
         container.innerHTML="";
@@ -641,7 +641,8 @@ footer p {
             hlthdiv.innerHTML=`
     <h2>Name: ${detail.Name}</h2>
     <h2>Age: ${detail.Age}</h2>
-    <img src="${detail.Photo}" id="image" alt="">
+    <img src="${detail.Photo}" id="image" alt="">3
+
     <h3>Medicines:</h3>
     <div class="medicines-container">
         <ul>
@@ -685,7 +686,7 @@ footer p {
 
     
         if (currentEditId) {
-            const response = await fetch(`http://localhost:3000/api/health/${currentEditId}`, {
+            const response = await fetch(`https://medivault-1.onrender.com/api/health/${currentEditId}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ Name,Age,Photo,Medicines,LVisit,NVisit})
@@ -702,7 +703,7 @@ footer p {
     }
 
     async function deleteDetails(id){
-        const response = await fetch(`http://localhost:3000/api/health/${id}`, {
+        const response = await fetch(`https://medivault-1.onrender.com/health/${id}`, {
         method:'DELETE'
 
     })
