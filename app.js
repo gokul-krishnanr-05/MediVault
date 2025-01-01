@@ -9,7 +9,7 @@ const cors=require('cors');
 mongoose.connect(process.env.DB_URI)
 app.use(cors());
  
-const Healthrouter=require('../project 6/routes/router');
+const Healthrouter=require('./routes/router');
 app.use('/api',Healthrouter)
 app.use(express.static(path.join(__dirname,'public')));
 app.set("view engine");
@@ -27,3 +27,4 @@ app.listen(PORT,()=>{
 })
 
 
+ 

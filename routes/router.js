@@ -19,7 +19,7 @@ router.post('/health', async (req, res) => {
 
     });
     try{
-        const Nhealth=await health.save();
+        const Nhealth=await health.save(); 
         res.status(200).json(Nhealth);
     }
     catch(error){
