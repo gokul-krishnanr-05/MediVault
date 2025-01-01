@@ -452,12 +452,16 @@ footer p {
         grid-gap: 20px;
     }
 
-    input {
+    input, select, textarea {
         width: 80%;
     }
 
     .btn button {
         width: 100%;
+    }
+
+    footer {
+        font-size: 0.9em;
     }
 }
 
@@ -474,24 +478,89 @@ footer p {
         padding: 20px;
     }
 
-    .health {
-        padding: 10px;
-    }
-
     .container3 {
         grid-template-columns: 1fr;
         grid-gap: 15px;
     }
 
-    input {
+    input, select, textarea {
         width: 100%;
     }
 
     button {
         width: 100%;
     }
+
+    footer {
+        padding: 20px;
+    }
+
+    footer .menu {
+        display: block;
+        margin-top: 10px;
+    }
 }
 
+/* Section for Patient Details List */
+#newuser {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 20px;
+}
+
+.health {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.health:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.health img {
+    width: 100%;
+    max-height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.health h2 {
+    color: #333;
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.health h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 15px;
+    text-align: center;
+    color: #4caf50;
+}
+
+/* Responsiveness for Health Section */
+@media (max-width: 768px) {
+    #newuser {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #newuser {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .health {
+        padding: 10px;
+    }
+}
     
     </style>
 </head>
